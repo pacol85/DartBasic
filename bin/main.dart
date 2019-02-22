@@ -135,7 +135,7 @@ main(List<String> arguments) {
 */
 
 //maps
-
+/*
 main(List<String> arguments) {
   //key value pair
   Map<String, String> people = new Map<String, String>();
@@ -157,5 +157,80 @@ main(List<String> arguments) {
     print("nombre seleccionado es: " + names[int.tryParse(pos) ?? 0]);
   }
 }
+*/
 
-//
+//Assertion
+/*
+main(List<String> arguments) {
+  print('Start');
+  int age = 43;
+  assert(age == 42);
+  print('finished');
+}
+*/
+
+//if else
+/*
+main(List<String> arguments) {
+  print("what's your age?");
+  int age = int.tryParse(stdin.readLineSync()) ?? 0;
+
+  if(age == 43) print("you're 43 years old");
+  if(age != 43) print("you're not 43");
+
+  if(age < 18) {
+    print("you are a minor");
+    if(age < 13) print("you're not even a teenager");
+  }
+
+  if(age > 65){
+    print("you're a senior");
+    if(age > 102) print("you're lucky to be alive");
+  }
+
+  if(age == 21){
+    print("this is your special year");
+  }else{
+    print("this is a normal year");
+  }
+}
+*/
+
+//switch case
+/*
+main(List<String> arguments) {
+  print("what's your age?");
+  int age = int.tryParse(stdin.readLineSync()) ?? 0;
+
+  switch(age){
+    case 18:
+      print("you're 18, you can vote!");
+      break;
+    case 21:
+      print("you're 21, you are an adult");
+      break;
+    case 65:
+      print("you can retire");
+      break;
+    default:
+      print("nothing special about this age");
+      break;
+  }
+
+  print("finished");
+}
+*/
+
+//loops
+
+main(List<String> arguments) {
+  int value;
+  int init = 1;
+  int max = 5;
+
+  value = init;
+  do{
+    print(value);
+    value++;
+  }while(value <= max);
+}
