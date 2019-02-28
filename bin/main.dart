@@ -222,15 +222,44 @@ main(List<String> arguments) {
 */
 
 //loops
-
+/*
 main(List<String> arguments) {
   int value;
   int init = 1;
   int max = 5;
 
   value = init;
+  //do hace la accion primero y luego hace la evaluacion
   do{
     print(value);
     value++;
   }while(value <= max);
+
+  print("done with do loop");
+
+  value = init;
+  //while evalua primero y luego hace la accion
+  while (value <= max){
+    print(value);
+    value++;
+  }
+
+  print("done with while loop");
+
+  //infinite loop
+  value = init;
+  do{
+    print("value: $value");
+    value++;
+    if(value >10) {
+      print("aqui termina");
+      break;
+    }
+  }while(true);
+}
+*/
+
+//
+main(List<String> arguments) {
+
 }
