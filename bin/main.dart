@@ -260,7 +260,7 @@ main(List<String> arguments) {
 */
 
 //for each
-
+/*
 main(List<String> arguments) {
   List people = ["Bryan", "Heather", "Chris"];
 
@@ -273,4 +273,59 @@ main(List<String> arguments) {
   people.forEach((person) {
     print(person);
   });
+}
+*/
+
+//loop homework
+/*
+main(List<String> arguments) {
+  for(int i = 1; i <= 10; i++){
+    print(i);
+    if(i == 5) print("Half way there");
+  }
+}
+*/
+
+//functions
+/*
+main(List<String> arguments) {
+  test();
+  sayHello("Paco");
+  print("your age in dog years is ${dogYears(33)}");
+
+  int wall1 = sqareFeet(10, 10);
+  int wall2 = sqareFeet(10, 20);
+  int wall3 = sqareFeet(10, 10);
+  int wall4 = sqareFeet(10, 20);
+  int ceiling = sqareFeet(20, 10);
+
+  double paint = paintNeeded(wall1, wall2, wall3, wall4, ceiling);
+  print("you need $paint gallons of paint");
+}
+
+void test(){
+  print("testing");
+}
+
+void sayHello(String name){
+  print("hello ${name}");
+}
+
+int dogYears(int age){
+  return age * 7;
+}
+
+int sqareFeet(int width, int length){
+  return width*length;
+}
+
+double paintNeeded(int w1, int w2, int w3, int w4, int c){
+  int footage = w1+w2+w3+w4+c;
+  return footage / 30;
+}
+*/
+
+//optional parameters
+main(List<String> arguments) {
+
 }
