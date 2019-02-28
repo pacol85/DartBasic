@@ -326,6 +326,39 @@ double paintNeeded(int w1, int w2, int w3, int w4, int c){
 */
 
 //optional parameters
+/*
 main(List<String> arguments) {
+  sayHello();
 
+  download("myFile.txt");
+  download("myFile2.txt", true);
+}
+
+void sayHello([String name = '']){
+  if(name.isNotEmpty) name = name.padLeft(name.length + 1);
+
+  print("hello${name}");
+}
+
+void download(String file, [bool open = false]){
+  print("Downloading $file");
+  if(open) print("Opening $file");
+}
+*/
+
+//named parameters
+
+main(List<String> arguments) {
+  int footage = squareFeet(length: 10, width: 5); //can be added in any order
+  print(footage);
+  download("myFile");
+  download("myFile2", port: 90);
+}
+
+int squareFeet({int width, int length}){
+  return width * length;
+}
+
+void download(String file, {int port: 80}){
+  print("Download ${file} on port ${port}");
 }
