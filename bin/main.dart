@@ -381,7 +381,7 @@ int calcYears({int age, int multiplier}){
 */
 
 //anonymous functions
-
+/*
 main(List<String> arguments) {
   (){print("hello");};
 
@@ -424,5 +424,56 @@ void printList(int max){
     if(half == i) {
       print("half way there");
     }
+  }
+}
+*/
+
+//exceptions, try catch finally
+/*
+main(List<String> arguments) {
+  //error is a program failure
+  //exception can be handled
+
+  try{
+    int age;
+    int dy = 7;
+
+    print(age * dy);
+  }
+  on NoSuchMethodError {
+    print("Sorry that's not going to happen");
+  }
+  catch(e) {
+    print("there was an error: ${e.toString()}");
+  }
+  finally {
+    print("complete");
+  }
+}
+*/
+
+//throwing exceptions
+main(List<String> arguments) {
+
+  try{
+    int age = 33;
+    int dy = 5;
+
+    if(age == null) throw new NullThrownError();
+
+    if(dy != 7) throw new Exception("Dog years must be 7");
+    print(age * dy);
+  }
+  on NullThrownError {
+    print("The value was null!!");
+  }
+  on NoSuchMethodError {
+    print("Sorry no such method");
+  }
+  catch(e) {
+    print("Unknown error: ${e.toString()}");
+  }
+  finally {
+    print("complete");
   }
 }
