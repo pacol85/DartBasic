@@ -347,7 +347,7 @@ void download(String file, [bool open = false]){
 */
 
 //named parameters
-
+/*
 main(List<String> arguments) {
   int footage = squareFeet(length: 10, width: 5); //can be added in any order
   print(footage);
@@ -361,4 +361,68 @@ int squareFeet({int width, int length}){
 
 void download(String file, {int port: 80}){
   print("Download ${file} on port ${port}");
+}
+*/
+
+//functions as objects
+/*
+main(List<String> arguments) {
+  int age = 33;
+  var dogYears = calcYears;
+  var catYears = calcYears;
+
+  print("your age in dog years is ${calcYears(age: 33, multiplier: 7)}");
+  print("your age in cat years is ${calcYears(age: 33, multiplier: 12)}");
+}
+
+int calcYears({int age, int multiplier}){
+  return age * multiplier;
+}
+*/
+
+//anonymous functions
+
+main(List<String> arguments) {
+  (){print("hello");};
+
+  List people = ["paco", "julio", "rebe"];
+
+  people.forEach(print);
+  print("-----------");
+  people.forEach((name) {
+    print(name);
+  });
+  
+  print("----------");
+  
+  people.where((name) {
+    switch(name){
+      case 'paco':
+        return true;
+      case 'julio':
+        return false;
+      case 'rebe':
+        return true;
+    }
+  }).forEach(print);
+
+  //tarea
+  int maxNumber = askMax();
+  printList(maxNumber);
+
+}
+
+int askMax(){
+  print("Write a max number:");
+  return int.tryParse(stdin.readLineSync()) ?? 0;
+}
+
+void printList(int max){
+  int half = (max/2).floor();
+  for(int i = 0; i <= max; i++){
+    print(i);
+    if(half == i) {
+      print("half way there");
+    }
+  }
 }
