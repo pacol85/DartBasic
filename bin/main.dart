@@ -453,6 +453,7 @@ main(List<String> arguments) {
 */
 
 //throwing exceptions
+/*
 main(List<String> arguments) {
 
   try{
@@ -475,5 +476,43 @@ main(List<String> arguments) {
   }
   finally {
     print("complete");
+  }
+}
+*/
+
+
+//homework
+main(List<String> arguments) {
+
+  try{
+    print("Please enter your age:");
+    int age = int.tryParse(stdin.readLineSync() ?? (throw new Exception("The data entered isn't an int")));
+
+    under18(age);
+    olderThan99(age);
+  }
+  on NullThrownError {
+    print("The value was null!!");
+  }
+  on NoSuchMethodError {
+    print("Sorry no such method");
+  }
+  catch(e) {
+    print("Unknown error: ${e.toString()}");
+  }
+  finally {
+    print("complete");
+  }
+}
+
+void under18(int age){
+  if(age < 18){
+    throw new Exception("too young");
+  }
+}
+
+void olderThan99(int age){
+  if(age > 99){
+    throw new Exception("too old");
   }
 }
